@@ -1,0 +1,32 @@
+-- 595.Big Countries
+SELECT
+    NAME,
+    POPULATION,
+    AREA
+    FROM WORLD
+        WHERE AREA > 3000000 OR POPULATION > 25000000;
+
+-- 183. Customers Who Never Order
+SELECT
+    A.NAME AS CUSTOMERS
+    FROM CUSTOMERS A
+        LEFT JOIN ORDERS B
+        ON A.ID = B.CUSTOMERID
+    WHERE B.ID IS NULL;
+
+-- 175. Combine Two Tables
+SELECT
+    A.FIRSTNAME,
+    A.LASTNAME,
+    B.CITY,
+    B.STATE
+    FROM PERSON A
+        LEFT JOIN ADDRESS B
+        ON A.PERSONID = B.PERSONID;
+
+-- 620. Not Boring Movies
+SELECT
+    *
+    FROM CINEMA
+    WHERE (ID % 2 = 1) AND (DESCRIPTION != 'BORING')
+    ORDER BY RATING DESC;
