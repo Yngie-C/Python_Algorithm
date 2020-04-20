@@ -4,12 +4,7 @@ SELECT
     NAME,
     SEX_UPON_INTAKE
         FROM ANIMAL_INS
-        WHERE NAME = 'Lucy' OR
-        NAME = 'Ella' OR
-        NAME = 'Pickle' OR
-        NAME = 'Rogan' OR
-        NAME ='Sabrina' OR
-        NAME ='Mitty';
+        WHERE NAME IN ('Lucy', 'Ella', 'Pickle', 'Rogan', 'Sabrina', 'Mitty');
 
 -- 이름에 el이 들어가는 동물 찾기
 SELECT
